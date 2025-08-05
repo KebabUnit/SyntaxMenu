@@ -9,8 +9,8 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #120d23;
-      color: #e5d8ff;
+      background-color: #cbc5e0; /* světlejší pozadí */
+      color: #2c1e4a; /* tmavší text */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -35,11 +35,11 @@
     p.subtitle {
       font-size: 1.2rem;
       margin-top: 10px;
-      color: #c2b8e0;
+      color: #5a4a91; /* jemnější fialová */
     }
 
     .download-button {
-        background: linear-gradient(90deg, #5c4eff, #c248f9);
+        background: linear-gradient(90deg, #9585ff, #c79cff);
         color: white;
         border: none;
         padding: 15px 30px;
@@ -51,7 +51,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 20px rgba(144, 64, 255, 0.3);
+        box-shadow: 0 4px 20px rgba(144, 64, 255, 0.2);
         transition: 0.3s;
     }
 
@@ -72,50 +72,58 @@
       max-width: 200px;
     }
 
-    .feature-icon {
-      font-size: 30px;
+    .feature-icon img {
+      width: 40px;
+      height: 40px;
       margin-bottom: 10px;
-      color: #b18fff;
+      filter: hue-rotate(250deg) saturate(120%);
     }
 
     .feature h3 {
       font-weight: 600;
       margin-bottom: 5px;
-      color: #ffffff;
+      color: #3c2a66;
     }
 
     .feature p {
       font-size: 0.9rem;
-      color: #bfb3d1;
+      color: #5e548e;
     }
   </style>
 </head>
-<link rel="icon" href="iconNoBackgroud.png">
+
+<link rel="icon" href="images/iconNoBackgroud.png">
 
 <body>
-  <img src="iconNoBackgroud.png" alt="Logo" class="logo" />
+  <img src="images/iconNoBackgroud.png" alt="Logo" class="logo" />
   <h1>Download our Loader</h1>
   <p class="subtitle">Fast, reliable, and easy to use.</p>
 
   <a href="Syntax.rar" download class="download-button">
-  Download Loader
+    Download Loader
   </a>
 
   <div class="features">
     <div class="feature">
-      <div class="feature-icon">⚡</div>
+      <div class="feature-icon">
+        <img src="images/multiple-alt.png" alt="Icon" />
+      </div>
       <h3>Everything at one place</h3>
       <p>We create mods for many games which you can access from one app.</p>
     </div>
     <div class="feature">
-      <div class="feature-icon">🔒</div>
+      <div class="feature-icon">
+        <img src="images/shield-check.png" alt="Icon" />
+      </div>
       <h3>Secure</h3>
       <p>Built with security and reliability in mind. Every modification is being developed by us.</p>
     </div>
     <div class="feature">
-      <div class="feature-icon">⚙️</div>
+      <div class="feature-icon">
+        <img src="images/wrench-simple.png" alt="Icon" />
+      </div>
       <h3>Easy Setup</h3>
-      <p>Once you download our mod loader, just select game, hit launch and have fun !</p>
+      <p>Once you download our mod loader, just select game, hit launch and have fun!</p>
     </div>
   </div>
 
@@ -123,7 +131,7 @@
   <p class="subtitle">1. Download loader from this page.</p>
   <p class="subtitle">2. Make sure your antivirus is turned off.</p>
   <p class="subtitle">3. Extract files, and run SyntaxLoader.exe</p>
-  <p class="subtitle">4. Here you can choose your game(if it is available)</p>
+  <p class="subtitle">4. Here you can choose your game (if it is available)</p>
   <p class="subtitle">5. Once your game is running, just hit launch.</p>
 
 </body>
