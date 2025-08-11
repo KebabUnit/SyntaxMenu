@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,142 +16,180 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      min-height: 100vh;
-      justify-content: center;
       padding: 20px;
-    }img.logo {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-}
+    }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0;
-}
+    .container {
+      max-width: 1100px;
+      width: 100%;
+    }
 
-p.subtitle {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #5a4a91;
-}
+    img.logo {
+      width: 90px;
+      height: 90px;
+      margin: 30px 0 15px;
+    }
 
-.download-button {
-    background: linear-gradient(90deg, #9585ff, #c79cff);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 30px;
-    margin: 30px 0;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(144, 64, 255, 0.2);
-    transition: transform 0.3s;
-}
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+      color: #2c1e4a;
+    }
 
-.download-button:hover {
-  transform: scale(1.05);
-}
+    p.subtitle {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #5a4a91;
+    }
 
-.features {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1000px;
-  margin-top: 20px;
-}
+    .download-button {
+      background: linear-gradient(90deg, #9585ff, #c79cff);
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      margin: 30px 0;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(144, 64, 255, 0.25);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
 
-.feature {
-  max-width: 250px;
-}
+    .download-button:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 6px 25px rgba(144, 64, 255, 0.35);
+    }
 
-.feature-icon img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-  filter: hue-rotate(250deg) saturate(120%);
-}
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
 
-.feature h3 {
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #3c2a66;
-}
+    .feature {
+      max-width: 280px;
+      background: rgba(255, 255, 255, 0.35);
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-.feature p {
-  font-size: 0.9rem;
-  color: #5e548e;
-}
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
-.instructions {
-  max-width: 600px;
-  text-align: left;
-  margin-top: 40px;
-}
+    .feature-icon img {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 10px;
+      filter: hue-rotate(250deg) saturate(120%);
+    }
 
-.instructions h2 {
-  color: #3c2a66;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+    .feature h3 {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #3c2a66;
+    }
 
-.instructions ol {
-  padding-left: 20px;
-  color: #5a4a91;
-}
+    .feature p {
+      font-size: 0.92rem;
+      color: #5e548e;
+    }
 
-footer {
-  margin-top: 50px;
-  font-size: 0.8rem;
-  color: #888;
-}
+    .instructions {
+      max-width: 650px;
+      text-align: left;
+      margin: 50px auto 20px;
+      background: rgba(255,255,255,0.25);
+      padding: 20px 25px;
+      border-radius: 15px;
+    }
 
+    .instructions h2 {
+      color: #3c2a66;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .instructions ol {
+      padding-left: 20px;
+      color: #5a4a91;
+    }
+
+    .instructions ol li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.3rem; }
+      .download-button { width: 100%; }
+      .feature { max-width: 100%; }
+      .instructions { font-size: 0.9rem; }
+    }
   </style>
 </head>
 <body>
-  <img src="iconNoBackgroud.png" alt="Syntax Logo" class="logo" />
-  <h1>Download our Loader</h1>
-  <p class="subtitle">Fast, reliable, and easy to use.</p>  <a href="Syntax.rar" download class="download-button">
-    Download Loader
-  </a>  <div class="features">
-    <div class="feature">
-      <div class="feature-icon">
-        <img src="multiple-alt.png" alt="Multiple Mods Icon" />
+  <div class="container">
+    <img src="iconNoBackgroud.png" alt="Syntax Logo" class="logo" />
+    <h1>Download our Loader</h1>
+    <p class="subtitle">Fast, reliable, and easy to use.</p>
+
+    <a href="Syntax.rar" download class="download-button">
+      Download Loader
+    </a>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <img src="multiple-alt.png" alt="Multiple Mods Icon" />
+        </div>
+        <h3>Everything in one place</h3>
+        <p>Access mods for multiple games through a single, easy-to-use application.</p>
       </div>
-      <h3>Everything at one place</h3>
-      <p>Our main goal is to create mods for many games which you can access from one app.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">
-        <img src="shield-check.png" alt="Secure Icon" />
+      <div class="feature">
+        <div class="feature-icon">
+          <img src="shield-check.png" alt="Secure Icon" />
+        </div>
+        <h3>Secure</h3>
+        <p>All modifications are developed directly by us, say goodbye to files from unknown unverified sources.</p>
       </div>
-      <h3>Secure</h3>
-      <p>Built with security and safety in mind. We are not just collecting some unknown Dlls from the internet, but every modification is being developed by us.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">
-        <img src="wrench-simple.png" alt="Setup Icon" />
+      <div class="feature">
+        <div class="feature-icon">
+          <img src="wrench-simple.png" alt="Setup Icon" />
+        </div>
+        <h3>Easy Setup</h3>
+        <p>Choose your game, click launch, and enjoy — no complicated setup required.</p>
       </div>
-      <h3>Easy Setup</h3>
-      <p>Once you download our mod loader, just select the game, hit launch, and have fun!</p>
     </div>
-  </div>  <div class="instructions">
-    <h2>How to install:</h2>
-    <ol>
-      <li>Download the loader from this page.</li>
-      <li>Disable antivirus temporarily (some may flag mod loaders).</li>
-      <li>Extract the files and run <strong>SyntaxLoader.exe</strong>.</li>
-      <li>Select the game you want to use (if available).</li>
-      <li>Launch the game and hit "Launch" in the loader.</li>
-    </ol>
-  </div>  <footer>
-    &copy; 2025 Syntax Unit. All rights reserved.
-  </footer>
+
+    <div class="instructions">
+      <h2>How to install:</h2>
+      <ol>
+        <li>Download the loader from this page.</li>
+        <li>If your antivirus warns about the loader, whitelist it in settings (some flag mod loaders by default).</li>
+        <li>Extract the files and run <strong>SyntaxLoader.exe</strong>.</li>
+        <li>Select your desired game (if available).</li>
+        <li>Launch the game and click "Launch" in the loader.</li>
+      </ol>
+    </div>
+
+    <footer>
+      &copy; 2025 Syntax Unit. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
