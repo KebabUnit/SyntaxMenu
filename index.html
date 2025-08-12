@@ -7,21 +7,30 @@
   <link rel="icon" href="iconNoBackgroud.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    /* Animované pozadí */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #cbc5e0;
       color: #2c1e4a;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
       padding: 20px;
+      background: linear-gradient(270deg, #9585ff, #c79cff, #a68fff, #dbc7ff);
+      background-size: 800% 800%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
       max-width: 1100px;
       width: 100%;
+      text-align: center;
     }
 
     img.logo {
@@ -34,17 +43,16 @@
       font-size: 3rem;
       font-weight: 800;
       margin: 0;
-      color: #2c1e4a;
     }
 
     p.subtitle {
       font-size: 1.2rem;
       margin-top: 10px;
-      color: #5a4a91;
+      color: rgba(255,255,255,0.85);
     }
 
     .download-button {
-      background: linear-gradient(90deg, #9585ff, #c79cff);
+      background: linear-gradient(90deg, #7b66ff, #c79cff);
       color: white;
       border: none;
       padding: 15px 35px;
@@ -56,13 +64,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 20px rgba(144, 64, 255, 0.25);
+      box-shadow: 0 4px 20px rgba(144, 64, 255, 0.3);
       transition: transform 0.25s, box-shadow 0.25s;
     }
 
     .download-button:hover {
       transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 6px 25px rgba(144, 64, 255, 0.35);
+      box-shadow: 0 6px 25px rgba(144, 64, 255, 0.4);
     }
 
     .features {
@@ -75,10 +83,11 @@
 
     .feature {
       max-width: 280px;
-      background: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.2);
       padding: 20px;
       border-radius: 15px;
       transition: transform 0.2s, box-shadow 0.2s;
+      backdrop-filter: blur(8px);
     }
 
     .feature:hover {
@@ -90,38 +99,67 @@
       width: 45px;
       height: 45px;
       margin-bottom: 10px;
-      filter: hue-rotate(250deg) saturate(120%);
     }
 
     .feature h3 {
       font-weight: 600;
       margin-bottom: 5px;
-      color: #3c2a66;
+      color: #fff;
     }
 
     .feature p {
       font-size: 0.92rem;
-      color: #5e548e;
+      color: rgba(255,255,255,0.85);
     }
 
+    /* Screenshot sekce */
+    .screenshots {
+      margin-top: 50px;
+    }
+
+    .screenshots h2 {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .screenshot-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .screenshot-grid img {
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      transition: transform 0.25s;
+    }
+
+    .screenshot-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Instrukce */
     .instructions {
       max-width: 650px;
       text-align: left;
       margin: 50px auto 20px;
-      background: rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.2);
       padding: 20px 25px;
       border-radius: 15px;
+      backdrop-filter: blur(6px);
+      color: #fff;
     }
 
     .instructions h2 {
-      color: #3c2a66;
       font-weight: 600;
       margin-bottom: 12px;
     }
 
     .instructions ol {
       padding-left: 20px;
-      color: #5a4a91;
     }
 
     .instructions ol li {
@@ -131,13 +169,14 @@
     footer {
       margin: 40px 0 20px;
       font-size: 0.8rem;
-      color: #888;
+      color: rgba(255,255,255,0.8);
     }
 
     @media (max-width: 600px) {
       h1 { font-size: 2.3rem; }
       .download-button { width: 100%; }
       .feature { max-width: 100%; }
+      .screenshot-grid img { max-width: 100%; }
       .instructions { font-size: 0.9rem; }
     }
   </style>
@@ -148,9 +187,7 @@
     <h1>Download our Loader</h1>
     <p class="subtitle">Fast, reliable, and easy to use.</p>
 
-    <a href="Syntax.rar" download class="download-button">
-      Download Loader
-    </a>
+    <a href="Syntax.rar" download class="download-button">Download Loader</a>
 
     <div class="features">
       <div class="feature">
@@ -176,6 +213,16 @@
       </div>
     </div>
 
+    <!-- Screenshot sekce -->
+    <div class="screenshots">
+      <h2>Preview</h2>
+      <div class="screenshot-grid">
+        <img src="screenshot1.png" alt="Loader screenshot 1">
+        <img src="screenshot2.png" alt="Loader screenshot 2">
+        <img src="screenshot3.png" alt="Loader screenshot 3">
+      </div>
+    </div>
+
     <div class="instructions">
       <h2>How to install:</h2>
       <ol>
@@ -188,7 +235,7 @@
     </div>
 
     <footer>
-      &copy; 2025 Syntax Modz. All rights reserved.
+      &copy; 2025 Syntax Unit. All rights reserved.
     </footer>
   </div>
 </body>
